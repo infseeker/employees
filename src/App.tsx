@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
       Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   }
   html {
-    margin-left: calc(100vw - 100%);
+    overflow-y: scroll;
   }
 `;
 

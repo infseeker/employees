@@ -1,4 +1,3 @@
-import { ErrorResponse } from '@remix-run/router';
 import axios from 'axios';
 import { User } from '../models/User';
 

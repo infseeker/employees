@@ -145,7 +145,7 @@ export default function UserList() {
           </>
         ) : ''}
 
-        {status === RequestStatus.Fail && !users.length && (
+        {status === RequestStatus.Fail && (
           <FailImg src={failImg} alt="Not found" onClick={() => {
             new Audio(require('../assets/sounds/cat-meow.mp3')).play();
           }} />

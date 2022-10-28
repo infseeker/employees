@@ -18,8 +18,8 @@ const $currentUserFilter = createStore<Department>(Departments.All).on(
 const fetchUsersFx = createEffect({
   handler: async (filter: Department) => {
     // return await UserService.getDynamicUsers();
-    // return await UserService.get500();
-    return await UserService.getUsersByFilter(filter.value);
+    return await UserService.get500();
+    // return await UserService.getUsersByFilter(filter.value);
   },
 });
 
