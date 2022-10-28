@@ -60,10 +60,9 @@
 
 4. При попытке получить изображения пользователей напрямую посредством отдельного запроса ``https://api.lorem.space/image/face?w=120&h=120`` (в том числе с использованием доп. параметра ``&u={user.id}``) к каждой картинке из JS возникала ошибка CORS ``Access to XMLHttpRequest has been blocked by CORS policy``. При попытке получить данные изображения через canvas также возникала ошибка ``Tainted canvases may not be exported``. При попытке получить прямую ссылку на изображение при помощи прокси ``https://cors-anywhere.herokuapp.com``, сервер выдавал ``403`` ошибку. Иных способов получить данные изображений пользователей из запроса ``users?__example=...`` для их дальнейшего кэширования найти не удалось.
 
-
 ## Технологический стек
 1. React + React Router
-2. Axios
-3. Effector + Patronum
+2. Effector + Patronum
+3. Axios
 4. Styled Components
 5. TypeScript
