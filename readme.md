@@ -1,6 +1,6 @@
 # Kode Team
 Проект отборочного этапа стажировки в компанию [KODE](https://kode.ru/). <br />
-Демо: [kode-team.infseeker-todo.tk](https://kode-team.infseeker-todo.tk)
+Демо: [dev.kode.infseeker.ru](https://dev.kode.infseeker.ru)
 
 ## Оценка и затраты времени на выполнение задач
 | Задачи | Оценка (ч.) | Затраты (ч.) |
