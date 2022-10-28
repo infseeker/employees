@@ -31,7 +31,7 @@ const fetchUsersFx = createEffect({
         lsItemCacheName,
         JSON.stringify({
           [`${filter.value}`]: {
-            cachedTime: new Date().getTime(),
+            cached: new Date().getTime(),
             data: users,
           },
         }),
@@ -46,13 +46,13 @@ const fetchUsersFx = createEffect({
       if (
         usersByFilter &&
         usersByFilter.data &&
-        now - usersByFilter.cachedTime < cacheTimeout
+        now - usersByFilter.cached < cacheTimeout
       ) {
         users = usersByFilter.data;
       } else {
         users = await UserService.getUsersByFilter(filter.value);
         cachedUsers[`${filter.value}`] = {
-          cachedTime: new Date().getTime(),
+          cached: new Date().getTime(),
           data: users,
         };
 
