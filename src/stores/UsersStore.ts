@@ -17,9 +17,6 @@ const $currentUserFilter = createStore<Department>(Departments.All).on(
 
 const fetchUsersFx = createEffect({
   handler: async (filter: Department) => {
-    // return await UserService.getDynamicUsers();
-    // return await UserService.get500();
-
     let users;
     const lsItemCacheName: string = process.env.REACT_APP_LS_ITEM_CACHE_NAME!;
     const cache = localStorage.getItem(lsItemCacheName);
@@ -37,7 +34,7 @@ const fetchUsersFx = createEffect({
         }),
       );
     } else {
-      const cachedUsers = JSON.parse(localStorage.getItem(lsItemCacheName)!);
+      const cachedUsers = JSON.parse(cache);
       const usersByFilter = cachedUsers[filter.value];
       const cacheTimeout: number =
         parseFloat(process.env.REACT_APP_CACHE_TIMEOUT_MIN!) * 1000 * 60;
